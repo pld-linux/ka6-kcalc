@@ -1,18 +1,18 @@
 #
 # Conditional build:
 %bcond_with	tests		# build with tests
-%define		kdeappsver	24.05.0
+%define		kdeappsver	24.05.1
 %define		kframever	5.94.0
 %define		qtver		5.15.2
 %define		kaname		kcalc
 Summary:	Kcalc
 Name:		ka6-%{kaname}
-Version:	24.05.0
+Version:	24.05.1
 Release:	1
 License:	GPL v2+/LGPL v2.1+
 Group:		X11/Applications
 Source0:	https://download.kde.org/stable/release-service/%{kdeappsver}/src/%{kaname}-%{version}.tar.xz
-# Source0-md5:	57a2bda7f5f17b82e9adb3172ad7cc26
+# Source0-md5:	6f94e95ec980e92010b5924fc5d2b3cd
 URL:		http://www.kde.org/
 BuildRequires:	Qt6Core-devel >= %{qtver}
 BuildRequires:	Qt6Gui-devel >= 5.11.1
@@ -37,6 +37,7 @@ BuildRequires:	rpmbuild(macros) >= 1.164
 BuildRequires:	shared-mime-info
 BuildRequires:	tar >= 1:1.22
 BuildRequires:	xz
+Obsoletes:	ka5-%{kaname} < %{version}
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
