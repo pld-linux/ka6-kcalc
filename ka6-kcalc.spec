@@ -1,18 +1,18 @@
 #
 # Conditional build:
 %bcond_with	tests		# build with tests
-%define		kdeappsver	25.08.2
+%define		kdeappsver	25.08.3
 %define		kframever	5.94.0
 %define		qtver		5.15.2
 %define		kaname		kcalc
 Summary:	Kcalc
 Name:		ka6-%{kaname}
-Version:	25.08.2
-Release:	2
+Version:	25.08.3
+Release:	1
 License:	GPL v2+/LGPL v2.1+
 Group:		X11/Applications
 Source0:	https://download.kde.org/stable/release-service/%{kdeappsver}/src/%{kaname}-%{version}.tar.xz
-# Source0-md5:	f57b0b044eaccf573851440fd7b8c974
+# Source0-md5:	ed5c1ae43e13ab8675cd69d18f3c412d
 URL:		http://www.kde.org/
 BuildRequires:	Qt6Core-devel >= %{qtver}
 BuildRequires:	Qt6Gui-devel >= 5.11.1
@@ -51,10 +51,9 @@ functions, logic operations, and statistical calculations.
 
 %description -l pl.UTF-8
 KCalc jest kalkulatorem, które oferuje wiele więcej funkcji
-matematycznych niż widać na pierwszy rzut oka. Właściwości:
-zwyczajna funkcjonalność oferowana przez większość kalkulatorów
-naukowych; funkcje trygonometryczne, operacje logiczne, obliczania
-statystyczne.
+matematycznych niż widać na pierwszy rzut oka. Właściwości: zwyczajna
+funkcjonalność oferowana przez większość kalkulatorów naukowych;
+funkcje trygonometryczne, operacje logiczne, obliczania statystyczne.
 
 %prep
 %setup -q -n %{kaname}-%{version}
